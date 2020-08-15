@@ -5,8 +5,6 @@
   --primary-font: "Isidora", sans-serif;
   --secondary-font: "Montserrat", sans-serif;
   --col: 8.3333vw;
-  --min-window: 600;
-  --max-window: 4000;
 }
 
 
@@ -15,7 +13,8 @@
 // -----------------------
 
 $theme-colors: (
-  grey: #5f5f57,
+  grey: #a8a99e,
+  ebony: #5f5f57,
   blue: #002855,
   purple: #734c9f,
   teal: #008c99,
