@@ -1,6 +1,15 @@
 /** Import Bootstrap functions */
 @import "~bootstrap/scss/functions";
 
+:root {
+  --primary-font: "Isidora", sans-serif;
+  --secondary-font: "Montserrat", sans-serif;
+  --col: 8.3333vw;
+  --min-window: 600;
+  --max-window: 4000;
+}
+
+
 // -----------------------
 // Colors
 // -----------------------
@@ -15,3 +24,43 @@ $theme-colors: (
   red: #f9423a,
 );
 
+
+// -----------------------
+// Fonts Installed
+// -----------------------
+
+@font-face {
+  font-family: "Isidora";
+  src: url("../fonts/isidora-black.woff") format("woff");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Isidora";
+  src: url("../fonts/isidora-bold.woff") format("woff");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Isidora";
+  src: url("../fonts/isidora-light.woff") format("woff");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Isidora";
+  src: url("../fonts/isidora-semibold.woff") format("woff");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Isidora";
+  src: url("../fonts/isidora-regular.woff") format("woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Isidora Alt";
+  src: url("../fonts/isidoraalt-bold.woff") format("woff");
+  font-weight: 700;
+}

@@ -1,4 +1,100 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-variant-numeric: lining-nums;
+  overflow-x: hidden;
+}
+
 ::selection {
   background: theme-color("blue");
   color: white;
 }
+
+
+// -----------------------
+// Typography
+// -----------------------
+
+%h1,
+h1 {
+  @include fontSize(85px);
+  color: white;
+  font-family: var(--primary-font);
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+%h2,
+h2 {
+  @include fontSize(40px);
+  color: theme-color("blue");
+  font-family: var(--primary-font);
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+%h3,
+h3 {
+  @include fontSize(40px);
+  color: theme-color("teal");
+  font-family: var(--primary-font);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+%h4,
+h4 {
+  @include fontSize(18px);
+  color: theme-color("teal");
+  font-family: var(--primary-font);
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+%h5,
+h5 {
+  @include fontSize(13px);
+  color: theme-color("teal");
+  font-family: var(--primary-font);
+  font-weight: 700;
+  line-height: 1;
+}
+
+%p,
+p {
+  @include fontSize(17px);
+  color: theme-color("grey");
+  font-family: var(--secondary-font);
+  font-weight: 400;
+  line-height: 1.75;
+  
+  &.large {
+    @include fontSize(19px);
+  }
+
+  &.small {
+    @include fontSize(15px);
+  }
+
+  a {
+    color: theme-color("teal");
+    font-weight: 700;
+  }
+}
+
+blockquote {
+  @extend %p;
+  font-style: italic;
+}
+
+ul {
+  li {
+    @extend %p;
+    font-weight: 700;
+  }
+}
+
+
+// -----------------------
+// Inheritances
+// -----------------------
