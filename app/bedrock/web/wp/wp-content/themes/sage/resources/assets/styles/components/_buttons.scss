@@ -1,0 +1,52 @@
+.btn {
+	@include fontSize(13px);
+	font-family: var(--primary-font);
+	font-weight: 700;
+	letter-spacing: 5px;
+	line-height: 1;
+	padding: 24px 60px 20px;
+	text-transform: uppercase;
+
+	&-primary {
+		background: theme-color("purple");
+	}
+
+	&-secondary {
+		background: theme-color("teal");
+	}
+
+	&-outline-primary {
+		border: 4px solid theme-color("teal");
+	}
+
+	&-sm {
+		background: transparent;
+		padding: 0;
+
+		&.btn {
+			&-primary {
+				color: theme-color("purple");
+			}
+
+			&-secondary {
+				color: theme-color("teal");
+			}
+		}
+	}
+
+	&-lg {
+		@include fontSize(22px);
+		box-shadow: 0 0 15px 0 rgba(black, .15);
+		color: theme-color("purple");
+		font-weight: 600;
+		letter-spacing: 0;
+		padding: 40px 30px;
+		text-transform: none;
+		span {
+			margin: 0 25px;
+		}
+		i {
+			@include fontSize(40px);
+		}
+	}
+}
