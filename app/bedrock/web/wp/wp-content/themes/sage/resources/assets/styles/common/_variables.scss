@@ -1,10 +1,17 @@
 /** Import Bootstrap functions */
 @import "~bootstrap/scss/functions";
 
+// -----------------------
+// Colors
+// -----------------------
+
 $theme-colors: (
-	primary: #525ddc
+  grey: #5f5f57,
+  blue: #002855,
+  purple: #734c9f,
+  teal: #008c99,
+  green: #89a84f,
+  yellow: #ffb549,
+  red: #f9423a,
 );
 
-/** Bootstrap navbar fix (https://git.io/fADqW) */
-$navbar-dark-toggler-icon-bg: none;
-$navbar-light-toggler-icon-bg: none;
