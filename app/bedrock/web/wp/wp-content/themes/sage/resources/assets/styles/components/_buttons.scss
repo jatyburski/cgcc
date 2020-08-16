@@ -9,14 +9,17 @@
 
 	&-primary {
 		background: theme-color("purple");
+		color: white;
 	}
 
 	&-secondary {
 		background: theme-color("teal");
+		color: white;
 	}
 
 	&-outline-primary {
 		border: 4px solid theme-color("teal");
+		color: theme-color("teal");
 	}
 
 	&-sm {

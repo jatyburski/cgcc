@@ -20,7 +20,7 @@ body {
   color: white;
   font-family: var(--primary-font);
   font-weight: 300;
-  line-height: 1.1;
+  line-height: 1.12;
 }
 
 %h2,h2 {
@@ -28,15 +28,15 @@ body {
   color: theme-color("blue");
   font-family: var(--primary-font);
   font-weight: 900;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 %h3, h3 {
-  @include fontSize(40px);
+  @include fontSize(22px);
   color: theme-color("teal");
   font-family: var(--primary-font);
   font-weight: 600;
-  line-height: 1.25;
+  line-height: 1.85;
 
   &.accent {
     line-height: 1;
@@ -72,7 +72,7 @@ body {
   color: theme-color("ebony");
   font-family: var(--secondary-font);
   font-weight: 400;
-  line-height: 1.75;
+  line-height: 1.9;
   
   &.large {
     @include fontSize(19px);
@@ -102,7 +102,6 @@ blockquote {
     border-radius: 100%;
     box-shadow: 5px 10px 15px 0 rgba(black, .15);
     content: '“';
-    font-family: var(--primary-font);
     left: 20px;
     line-height: 1;
     position: absolute;
@@ -112,6 +111,7 @@ blockquote {
 
   strong {
     color: theme-color("yellow");
+    font-weight: 700;
   }
 }
 

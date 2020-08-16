@@ -44,7 +44,9 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'primary_navigation' => __('Primary Navigation', 'sage')
+        'becoming_a_patient' => __('Becoming A Patient', 'sage'),
+        'for_patients' => __('For Patients', 'sage'),
+        'about_cgcc' => __('About CGCC', 'sage')
     ]);
 
     /**
@@ -77,18 +79,22 @@ add_action('after_setup_theme', function () {
  */
 add_action('widgets_init', function () {
     $config = [
-        'before_widget' => '<section class="widget %1$s %2$s">',
-        'after_widget'  => '</section>',
+        'before_widget' => '<div class="col">',
+        'after_widget'  => '</div>',
         'before_title'  => '<h3>',
         'after_title'   => '</h3>'
     ];
     register_sidebar([
-        'name'          => __('Primary', 'sage'),
-        'id'            => 'sidebar-primary'
+        'name'          => __('Location 1', 'sage'),
+        'id'            => 'sidebar-location-1'
     ] + $config);
     register_sidebar([
-        'name'          => __('Footer', 'sage'),
-        'id'            => 'sidebar-footer'
+        'name'          => __('Location 2', 'sage'),
+        'id'            => 'sidebar-location-2'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('SEO', 'sage'),
+        'id'            => 'sidebar-seo'
     ] + $config);
 });
 
