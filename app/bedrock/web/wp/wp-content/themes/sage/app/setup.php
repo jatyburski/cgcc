@@ -81,20 +81,24 @@ add_action('widgets_init', function () {
     $config = [
         'before_widget' => '<div class="col">',
         'after_widget'  => '</div>',
-        'before_title'  => '<h3>',
-        'after_title'   => '</h3>'
+        'before_title'  => '<h4>',
+        'after_title'   => '</h4>'
     ];
     register_sidebar([
+        'name'          => __('Logo Inverted', 'sage'),
+        'id'            => 'footer-logo'
+    ] + $config);
+    register_sidebar([
         'name'          => __('Location 1', 'sage'),
-        'id'            => 'sidebar-location-1'
+        'id'            => 'footer-location-1'
     ] + $config);
     register_sidebar([
         'name'          => __('Location 2', 'sage'),
-        'id'            => 'sidebar-location-2'
+        'id'            => 'footer-location-2'
     ] + $config);
     register_sidebar([
-        'name'          => __('SEO', 'sage'),
-        'id'            => 'sidebar-seo'
+        'name'          => __('Locality', 'sage'),
+        'id'            => 'footer-locality'
     ] + $config);
 });
 

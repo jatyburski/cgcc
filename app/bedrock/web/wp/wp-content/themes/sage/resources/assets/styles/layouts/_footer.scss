@@ -1,0 +1,64 @@
+.footer {
+	background: var(--prussian-blue);
+	color: white;
+	padding: 80px var(--col) 60px;
+
+	&__head {
+		border-bottom: 1px solid rgba(white, .5);
+		padding-bottom: 40px;
+		h4 {
+			font-weight: 400;
+
+			@include fontSize(15px);
+		}
+	}
+
+	&__nav {
+		padding: 80px var(--col) 20px;
+		.col:not(:last-child) {
+			flex-basis: 25%;
+			flex-grow: 0;
+			margin-bottom: 60px;
+			a {
+				color: white;
+			}
+			.sub-menu {
+				list-style-type: none;
+				margin-top: 15px;
+				padding: 0;
+				li a {
+					font-weight: 400;
+				}
+			}
+		}
+		h4 {
+			color: white;
+		}
+	}
+
+	&__colophon {
+		border-top: 1px solid rgba(white, .5);
+		padding-top: 60px;
+		p {
+			color: white;
+			line-height: 1;
+
+			@include fontSize(14px);
+			a {
+				color: white;
+			}
+		}
+		.col-md-6:last-child {
+			a {
+				color: white;
+				line-height: 1;
+	
+				@extend %p;
+				@include fontSize(14px);
+				&:not(:last-child) {
+					margin-right: 20px;
+				}
+			}
+		}
+	}
+}

@@ -5,62 +5,14 @@
   --primary-font: "Isidora", sans-serif;
   --secondary-font: "Montserrat", sans-serif;
   --decor-font: "Isidora Alt", sans-serif;
+
+  --dark-medium-grey: #a8a99e;
+  --ebony: #5f5f57;
+  --prussian-blue: #002855;
+  --dark-lavender: #734c9f;
+  --viridian-green: #008c99;
+  --pastel-orange: #ffb549;
+  --coral-red: #f9423a;
+
   --col: 8.3333vw;
-}
-
-
-// -----------------------
-// Colors
-// -----------------------
-
-$theme-colors: (
-  grey: #a8a99e,
-  ebony: #5f5f57,
-  blue: #002855,
-  purple: #734c9f,
-  teal: #008c99,
-  green: #89a84f,
-  yellow: #ffb549,
-  red: #f9423a,
-);
-
-
-// -----------------------
-// Fonts Installed
-// -----------------------
-
-@font-face {
-  font-family: "Isidora";
-  src: url("../fonts/isidora-light.woff") format("woff");
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: "Isidora";
-  src: url("../fonts/isidora-regular.woff") format("woff");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Isidora";
-  src: url("../fonts/isidora-semibold.woff") format("woff");
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: "Isidora";
-  src: url("../fonts/isidora-bold.woff") format("woff");
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: "Isidora Alt";
-  src: url("../fonts/isidoraalt-bold.woff") format("woff");
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: "Isidora";
-  src: url("../fonts/isidora-black.woff") format("woff");
-  font-weight: 900;
 }

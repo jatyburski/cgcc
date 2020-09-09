@@ -2,17 +2,17 @@
 
 	{{-- Logo & Locations --}}
 
-	<section class="row footer__head">
-		@php dynamic_sidebar( 'sidebar-logo-inverted' ) @endphp
+	<section class="row no-gutters footer__head">
+		@php dynamic_sidebar( 'footer-logo-inverted' ) @endphp
 
-		@php dynamic_sidebar( 'sidebar-location-1' ) @endphp
+		@php dynamic_sidebar( 'footer-location-1' ) @endphp
 
-		@php dynamic_sidebar( 'sidebar-location-2' ) @endphp
+		@php dynamic_sidebar( 'footer-location-2' ) @endphp
 	</section>
 
 	{{-- Navigation --}}
 
-	<section class="row flex-wrap footer__nav">
+	<section class="row no-gutters flex-wrap footer__nav">
 		@php
 			$menus = array(
 				'blood_disorders',
@@ -25,31 +25,31 @@
 		@endphp
 
 		@foreach ( $menus as $menu )
-			<div class="col">
-				{{ wp_nav_menu( ['theme_location' => $menu, 'menu_class' => 'nav'] ) }}
+			<div class="col p-0">
+				{{ wp_nav_menu( [ 'theme_location' => $menu, 'menu_class' => 'nav' ] ) }}
 			</div>
 		@endforeach
 
-		<div class="col">
-			<h4>{{ get_bloginfo( 'name', 'display' ) }}</h4>
+		<div class="col p-0">
+			<h4>{{ bloginfo( 'name' ) }}</h4>
 
-			@php dynamic_sidebar( 'sidebar-seo' ) @endphp
+			@php dynamic_sidebar( 'footer-locality' ) @endphp
 		</div>
 	</section>
 
 	{{-- Colophon --}}
 
-	<section class="row footer__colophon">
-		<div class="col-6">
-			<p>
+	<section class="row no-gutters footer__colophon">
+		<div class="col-md-6">
+			<p class="mb-0">
 				&copy;{{ date( 'Y' ) }}
-				<strong>{{ get_bloginfo( 'name', 'display' ) }}</strong>.
+				<strong>{{ bloginfo( 'name' ) }}</strong>.
 				Design by <a href="https://compulse.com/">Compulse</a>.
 			</p>
 		</div>
 		
-		<div class="col-6 d-flex justify-content-end">
-			@php dynamic_sidebar( 'sidebar-social-media' ) @endphp
+		<div class="col-md-6 d-flex justify-content-end">
+			@php dynamic_sidebar( 'footer-social-media' ) @endphp
 
 			<a href="/sitemap">Sitemap</a>
 		</div>

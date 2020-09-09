@@ -6,73 +6,85 @@ body {
 }
 
 ::selection {
-  background: theme-color("blue");
+  background: var(--prussian-blue);
   color: white;
 }
-
 
 // -----------------------
 // Typography
 // -----------------------
 
-%h1, h1 {
-  @include fontSize(85px);
+%h1, 
+h1 {
   color: white;
   font-family: var(--primary-font);
   font-weight: 300;
   line-height: 1.12;
+
+  @include fontSize(85px);
 }
 
-%h2,h2 {
-  @include fontSize(40px);
-  color: theme-color("blue");
+%h2,
+h2 {
+  color: var(--prussian-blue);
   font-family: var(--primary-font);
   font-weight: 900;
   line-height: 1.2;
+
+  @include fontSize(40px);
 }
 
-%h3, h3 {
-  @include fontSize(22px);
-  color: theme-color("teal");
+%h3, 
+h3 {
+  color: var(--viridian-green);
   font-family: var(--primary-font);
   font-weight: 600;
   line-height: 1.85;
+
+  @include fontSize(22px);
 
   &.accent {
     line-height: 1;
     margin: 35px 0 50px;
 
     &::after {
-      @include width-height(65px, 3px);
-      border-bottom: 3px solid theme-color("ebony");
+      border-bottom: 3px solid var(--ebony);
       content: '';
       display: block;
+
+      @include width-height(65px, 3px);
     }
   }
 }
 
-%h4, h4 {
-  @include fontSize(18px);
-  color: theme-color("teal");
+%h4, 
+h4 {
+  color: var(--viridian-green);
   font-family: var(--primary-font);
   font-weight: 700;
   line-height: 1.5;
+
+  @include fontSize(18px);
 }
 
-%h5, h5 {
-  @include fontSize(13px);
-  color: theme-color("teal");
+%h5, 
+h5 {
+  color: var(--viridian-green);
   font-family: var(--primary-font);
   font-weight: 700;
   line-height: 1;
+
+  @include fontSize(13px);
 }
 
-%p, p {
-  @include fontSize(17px);
-  color: theme-color("ebony");
+%p, 
+p {
+  color: var(--ebony);
   font-family: var(--secondary-font);
   font-weight: 400;
   line-height: 1.9;
+
+  @include fontSize(17px);
   
   &.large {
     @include fontSize(19px);
@@ -83,50 +95,52 @@ body {
   }
 
   a {
-    color: theme-color("teal");
+    color: var(--viridian-green);
     font-weight: 700;
   }
 }
 
 blockquote {
   @extend %p;
-  background: theme-color("teal");
+  background: var(--viridian-green);
   color: white;
   font-style: italic;
   padding: 80px;
   position: relative;
 
   &::before {
-    @include width-height(112px);
-    background: theme-color("yellow");
+    background: var(--pastel-orange);
     border-radius: 100%;
     box-shadow: 5px 10px 15px 0 rgba(black, .15);
-    content: '“';
+    content: "“";
     left: 20px;
     line-height: 1;
     position: absolute;
     top: 0;
     transform: translateY(-50%);
+
+    @include width-height(112px);
   }
 
   strong {
-    color: theme-color("yellow");
+    color: var(--pastel-orange);
     font-weight: 700;
   }
 }
 
-ul, ol {
+ul, 
+ol {
   li {
-    @extend %p;
-    color: theme-color("teal");
+    color: var(--viridian-green);
     font-weight: 700;
+
+    @extend %p;
   }
 }
 
 hr {
-  border: 1px solid theme-color("grey");
+  border: 1px solid var(--dark-medium-grey);
 }
-
 
 // -----------------------
 // Inheritances
