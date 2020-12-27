@@ -1,0 +1,48 @@
+.card {
+	background: white;
+
+	@at-root %line-base {
+		content:'';
+		left: 50%;
+		position: absolute;
+		transform: translateX(-50%);
+	}
+
+	&::before {
+		background: var(--viridian-green);
+		height: 12px;
+		top: 12px;
+		width: 145px;
+
+		@extend %line-base;
+	}
+
+	// &__container {
+
+	// }
+
+	&__title {
+		@extend %h3;
+
+		&::after {
+			background: var(--ebony);
+			bottom: -30px;
+			height: 3px;
+			width: 65px;
+
+			@extend %line-base;
+		}
+		span {
+			margin-bottom: 20px;
+			
+			@extend %h5;
+		}
+	}
+
+	&__img {
+		height: 145px;
+		object-fit: cover;
+		object-position: center;
+		width: 100%;
+	}
+}

@@ -1,53 +1,93 @@
 .footer {
-	background: var(--prussian-blue);
 	color: white;
 	padding: 80px var(--col) 60px;
 
-	&__head {
-		border-bottom: 1px solid rgba(white, .5);
-		padding-bottom: 40px;
-		h4 {
-			font-weight: 400;
+	@at-root %background {
+		content: '';
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+	}
 
-			@include fontSize(15px);
+	&:before {
+		background: var(--prussian-blue);
+		mix-blend-mode: hard-light;
+		
+		@extend %background;
+	}
+
+	&::after {
+		background: linear-gradient(to top right, var(--prussian-blue), transparent);
+
+		@extend %background;
+	}
+
+	&__bg {
+		left: 0;
+		object-fit: cover;
+		opacity: .05;
+		top: 0;
+		z-index: 1;
+	}
+
+	&__head {
+		border-bottom: 1px solid rgba(white, .25);
+		padding-bottom: 40px;
+		position: relative;
+		z-index: 2;
+		h4 {
+			@include fontSize(14px);
 		}
 	}
 
 	&__nav {
-		padding: 80px var(--col) 20px;
-		.col:not(:last-child) {
-			flex-basis: 25%;
-			flex-grow: 0;
-			margin-bottom: 60px;
-			a {
+		padding: 80px var(--col) 40px;
+		position: relative;
+		z-index: 2;
+		.col {
+			* {
 				color: white;
-			}
-			.sub-menu {
-				list-style-type: none;
-				margin-top: 15px;
-				padding: 0;
-				li a {
-					font-weight: 400;
+				p, 
+				.menu-item-has-children .menu-item {
+					@include fontSize(14px);
 				}
 			}
-		}
-		h4 {
-			color: white;
+			&:not(:last-child) {
+				flex-basis: 25%;
+				flex-grow: 0;
+				margin-bottom: 60px;
+
+				.sub-menu {
+					list-style-type: none;
+					margin-top: 15px;
+					padding: 0;
+					li a {
+						font-weight: 400;
+					}
+				}
+			}
 		}
 	}
 
 	&__colophon {
-		border-top: 1px solid rgba(white, .5);
-		padding-top: 60px;
+		border-top: 1px solid rgba(white, .25);
+		padding-top: 70px;
+		position: relative;
+		z-index: 2;
 		p {
 			color: white;
 			line-height: 1;
 
 			@include fontSize(14px);
+
 			a {
 				color: white;
 			}
 		}
+
 		.col-md-6:last-child {
 			a {
 				color: white;
@@ -55,6 +95,7 @@
 	
 				@extend %p;
 				@include fontSize(14px);
+
 				&:not(:last-child) {
 					margin-right: 20px;
 				}

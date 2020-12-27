@@ -1,0 +1,23 @@
+.banner {
+	background-position: center;
+	background-size: cover;
+	height: 400px;
+	padding: 80px var(--col) !important;
+
+	@at-root .home & {
+		height: calc(100vh - 165px);
+	}
+
+	h1 {
+		width: calc(var(--col) * 7);
+		
+		strong {
+			font-weight: 700;
+		}
+	}
+
+	p {
+		color: white;
+		width: calc(var(--col) * 4);
+	}
+}

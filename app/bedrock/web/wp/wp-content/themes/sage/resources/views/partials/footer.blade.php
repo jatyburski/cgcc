@@ -1,16 +1,14 @@
-<footer class="container-fluid footer">
+<footer class="container-fluid position-relative footer">
+
+	<img src="app/uploads/2020/12/gettyimages-1162215096-2048x2048-1.jpg" alt="" class="position-absolute h-100 w-100 footer__bg" />
 
 	{{-- Logo & Locations --}}
 
 	<section class="row no-gutters footer__head">
-		@php dynamic_sidebar( 'footer-logo-inverted' ) @endphp
-
-		@php dynamic_sidebar( 'footer-location-1' ) @endphp
-
-		@php dynamic_sidebar( 'footer-location-2' ) @endphp
+		@php dynamic_sidebar( 'footer-logo' ) @endphp
 	</section>
 
-	{{-- Navigation --}}
+	{{-- Navigation & About --}}
 
 	<section class="row no-gutters flex-wrap footer__nav">
 		@php
@@ -25,22 +23,18 @@
 		@endphp
 
 		@foreach ( $menus as $menu )
-			<div class="col p-0">
+			<nav class="col p-0">
 				{{ wp_nav_menu( [ 'theme_location' => $menu, 'menu_class' => 'nav' ] ) }}
-			</div>
+			</nav>
 		@endforeach
 
-		<div class="col p-0">
-			<h4>{{ bloginfo( 'name' ) }}</h4>
-
-			@php dynamic_sidebar( 'footer-locality' ) @endphp
-		</div>
+		@php dynamic_sidebar( 'footer-locality' ) @endphp
 	</section>
 
 	{{-- Colophon --}}
 
 	<section class="row no-gutters footer__colophon">
-		<div class="col-md-6">
+		<div class="col-6">
 			<p class="mb-0">
 				&copy;{{ date( 'Y' ) }}
 				<strong>{{ bloginfo( 'name' ) }}</strong>.
@@ -48,10 +42,10 @@
 			</p>
 		</div>
 		
-		<div class="col-md-6 d-flex justify-content-end">
-			@php dynamic_sidebar( 'footer-social-media' ) @endphp
+		<div class="col-6 d-flex align-items-center justify-content-end">
+			{{ wp_nav_menu( [ 'theme_location' => 'social_media', 'menu_class' => 'nav' ] ) }}
 
-			<a href="/sitemap">Sitemap</a>
+			<p><a class="font-weight-normal" href="/sitemap">Sitemap</a></p>
 		</div>
 	</section>
 

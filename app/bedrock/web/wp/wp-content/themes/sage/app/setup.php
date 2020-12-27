@@ -44,9 +44,13 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
+        'blood_disorders' => __('Blood Disorders', 'sage'),
+        'cancer_diagnoses' => __('Cancer Diagnoses', 'sage'),
         'becoming_a_patient' => __('Becoming A Patient', 'sage'),
         'for_patients' => __('For Patients', 'sage'),
-        'about_cgcc' => __('About CGCC', 'sage')
+        'about_cgcc' => __('About CGCC', 'sage'),
+        'quick_links' => __('Quick Links', 'sage'),
+        'social_media' => __('Social Media', 'sage')
     ]);
 
     /**
@@ -79,7 +83,7 @@ add_action('after_setup_theme', function () {
  */
 add_action('widgets_init', function () {
     $config = [
-        'before_widget' => '<div class="col">',
+        'before_widget' => '<div class="col p-0">',
         'after_widget'  => '</div>',
         'before_title'  => '<h4>',
         'after_title'   => '</h4>'
@@ -89,8 +93,8 @@ add_action('widgets_init', function () {
         'id'            => 'footer-logo'
     ] + $config);
     register_sidebar([
-        'name'          => __('Location 1', 'sage'),
-        'id'            => 'footer-location-1'
+        'name'          => __('Logo', 'sage'),
+        'id'            => 'header-logo'
     ] + $config);
     register_sidebar([
         'name'          => __('Location 2', 'sage'),
