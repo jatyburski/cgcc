@@ -1,5 +1,4 @@
 # Central Georgia Cancer Care
-Custom website for Central Georgia Cancer Care.
 
 ## Technologies
 - [Bedrock](https://roots.io/bedrock/)
