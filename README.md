@@ -6,3 +6,4 @@
 - [Webpack](https://webpack.js.org/)
 - [Blade](https://laravel.com/)
 - [Bootstrap](https://getbootstrap.com/)
+- [WordPress](https://wordpress.com/)
