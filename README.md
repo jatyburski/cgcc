@@ -5,5 +5,5 @@
 - [Sage](https://roots.io/sage/)
 - [Webpack](https://webpack.js.org/)
 - [Blade](https://laravel.com/)
-- [Bootstrap](https://getbootstrap.com/)
+- [Bootstrap 4](https://getbootstrap.com/)
 - [WordPress](https://wordpress.com/)
