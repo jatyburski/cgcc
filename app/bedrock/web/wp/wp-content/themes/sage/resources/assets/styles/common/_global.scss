@@ -55,6 +55,12 @@ h3 {
       @include width-height(65px, 3px);
     }
   }
+
+  span {
+    margin-bottom: 20px;
+    
+    @extend %h5;
+  }
 }
 
 %h4, 

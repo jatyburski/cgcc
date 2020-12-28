@@ -7,8 +7,8 @@
 
 		@foreach ($cards as $card)
 
-			<li class="border-0 col-lg-4 m-0 position-relative card">
-				<h2 class="position-relative text-center card__title">
+			<li class="bg-white border-0 col-lg-4 m-0 position-relative card">
+				<h2 class="position-relative text-center accent card__title">
 					<span class="d-block font-weight-bold text-uppercase">{{ $card['subtitle'] }}</span>
 					{{ $card['title'] }}
 				</h2>
@@ -19,7 +19,7 @@
 				@php echo $card['description'] @endphp
 
 				@php $btn = $card['button'] @endphp
-				<a class="btn btn__secondary d-inline-block m-auto" href="{{ $btn['url'] }}">{{ $btn['title'] }}</a>
+				<a class="d-inline-block m-auto btn btn__secondary btn__secondary--teal" href="{{ $btn['url'] }}">{{ $btn['title'] }}</a>
 			</li>
 
 		@endforeach	

@@ -1,0 +1,29 @@
+.team {
+	margin-bottom: 100px;
+
+	&__title {
+		@extend %h3;
+	}
+
+	&__member {
+		&:not(:first-child):not(:last-child) {
+			padding: 0 16px;
+		}
+
+		&:first-child {
+			padding-left: 16px;
+		}
+
+		&:last-child {
+			padding-right: 16px;
+		}
+
+		img {
+			margin-bottom: 15px;
+			object-position: center;
+			object-fit: cover;
+
+			@include width-height(100%, 266px);
+		}
+	}
+}

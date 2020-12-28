@@ -17,6 +17,7 @@
 				@else
 				
 					@include('partials.home.cards')
+					@include('partials.home.team')
 				
 				@endif
 			</main>

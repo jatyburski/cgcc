@@ -1,42 +1,22 @@
 .card {
-	background: white;
-
-	@at-root %line-base {
+	&::before {
+		background: var(--viridian-green);
 		content:'';
 		left: 50%;
 		position: absolute;
-		transform: translateX(-50%);
-	}
-
-	&::before {
-		background: var(--viridian-green);
-		height: 12px;
 		top: 12px;
-		width: 145px;
+		transform: translateX(-50%);
 
-		@extend %line-base;
+		@include width-height(145px, 12px);
+		
 	}
 
-	// &__container {
-
-	// }
+	&__container {
+		margin-bottom: 40px;
+	}
 
 	&__title {
 		@extend %h3;
-
-		&::after {
-			background: var(--ebony);
-			bottom: -30px;
-			height: 3px;
-			width: 65px;
-
-			@extend %line-base;
-		}
-		span {
-			margin-bottom: 20px;
-			
-			@extend %h5;
-		}
 	}
 
 	&__img {
