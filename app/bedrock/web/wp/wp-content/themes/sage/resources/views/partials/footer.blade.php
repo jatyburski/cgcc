@@ -37,6 +37,9 @@
 		<div class="col-6">
 			<p class="mb-0">
 				&copy;{{ date( 'Y' ) }}
+
+				{{-- app/Controllers.App --}}
+
 				<strong>{!! App::siteName() !!}</strong>.
 				Design by <a href="https://compulse.com/">Compulse</a>.
 			</p>
