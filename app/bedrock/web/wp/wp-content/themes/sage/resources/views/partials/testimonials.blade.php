@@ -8,7 +8,7 @@
 		</h2>
 
 		<div class="col-lg-6">
-			<img src="" alt="" />
+			
 		</div>
 
 		<ul class="carousel-inner col-lg-6 m-0 p-0 position-relative">
