@@ -37,7 +37,7 @@
 		<div class="col-6">
 			<p class="mb-0">
 				&copy;{{ date( 'Y' ) }}
-				<strong>{{ bloginfo( 'name' ) }}</strong>.
+				<strong>{!! App::siteName() !!}</strong>.
 				Design by <a href="https://compulse.com/">Compulse</a>.
 			</p>
 		</div>
