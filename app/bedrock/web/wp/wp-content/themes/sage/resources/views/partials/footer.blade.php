@@ -23,9 +23,11 @@
 		@endphp
 
 		@foreach ( $menus as $menu )
+
 			<nav class="col p-0">
 				{{ wp_nav_menu( [ 'theme_location' => $menu, 'menu_class' => 'nav' ] ) }}
 			</nav>
+			
 		@endforeach
 
 		@php dynamic_sidebar( 'footer-locality' ) @endphp

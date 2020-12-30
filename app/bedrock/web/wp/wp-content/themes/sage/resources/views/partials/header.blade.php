@@ -21,9 +21,11 @@
 				@endphp
 
 				@foreach ( $menus as $menu )
+
 					<div class="col p-0">
 						{{ wp_nav_menu( [ 'theme_location' => $menu, 'menu_class' => 'nav' ] ) }}
 					</div>
+					
 				@endforeach
 			</div>
 		</nav>
