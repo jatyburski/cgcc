@@ -1,0 +1,59 @@
+.nav {
+	border: 1px solid var(--ebony);
+
+	&__container {
+		border-bottom: 1px solid var(--ebony);
+		height: 50px;
+
+		.invisible {
+			opacity: 0;
+			z-index: -1;
+		}
+	}
+
+	&__inner {
+		height: 50px;
+		overflow: hidden;
+
+		@at-root .nav__toggle:checked ~ & {
+			height: auto;
+		}
+	}
+
+	&__toggle {
+		border-bottom: 1px solid var(--ebony);
+		border-right: 1px solid var(--ebony);
+		flex-shrink: 0;
+	}
+	
+	&__label {
+		color: var(--ebony);
+		cursor: pointer;
+		line-height: 50px;
+		padding: 0 50px 0 20px;
+		text-decoration: none;
+
+		@include fontSize(14px);
+
+		&::after {
+			border-color: var(--ebony) transparent transparent transparent;
+			border-style: solid;
+			border-width: 5px 5px 0;
+			content: '';
+			right: 20px;
+			position: absolute;
+			top: 22px;
+
+			@include width-height(0);
+
+			@at-root .invisible:checked ~ & {
+				border-color: transparent transparent var(--ebony) transparent;
+				border-width: 0 5px 5px;
+			}
+		}
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

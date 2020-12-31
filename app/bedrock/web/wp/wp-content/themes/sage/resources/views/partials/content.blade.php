@@ -1,9 +1,12 @@
-<article @php post_class() @endphp>
-	<header>
-		<h2 class="entry-title"><a href="{{ get_permalink() }}">{!! get_the_title() !!}</a></h2>
-		@include('partials/entry-meta')
-	</header>
-	<div class="entry-summary">
-		@php the_excerpt() @endphp
-	</div>
-</article>
+@if ( have_rows('section') )
+
+	@while ( have_rows('section') )
+
+		@php 
+			the_row();
+			layout_get_component( get_row_layout('partials') );
+		@endphp
+		
+	@endwhile
+
+@endif

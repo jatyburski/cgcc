@@ -9,17 +9,21 @@
 
 			<li class="bg-white border-0 col-lg-4 m-0 position-relative card">
 				<h2 class="position-relative text-center accent card__title">
-					<span class="d-block font-weight-bold text-uppercase">{{ $card['subtitle'] }}</span>
+					<span class="d-block font-weight-bold text-uppercase">
+						{{ $card['subtitle'] }}
+					</span>
 					{{ $card['title'] }}
 				</h2>
 
 				@php $img = $card['image'] @endphp
-				<img class="card__img" src="{{ $img['url'] }}" alt="{{ $img['alt'] }}" />
+				{{ wp_get_attachment_image($img, 'large') }}
 
 				@php echo $card['description'] @endphp
 
 				@php $btn = $card['button'] @endphp
-				<a class="d-inline-block m-auto btn btn__secondary btn__secondary--teal" href="{{ $btn['url'] }}">{{ $btn['title'] }}</a>
+				<a class="d-inline-block m-auto btn btn__secondary btn__secondary--teal" href="{{ $btn['url'] }}">
+					{{ $btn['title'] }}
+				</a>
 			</li>
 
 		@endforeach	
