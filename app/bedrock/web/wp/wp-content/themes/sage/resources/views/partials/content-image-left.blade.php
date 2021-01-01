@@ -11,15 +11,26 @@
 	</div>
 
 	<div class="col-lg-6 content__img content__img--left">
+
 		@php $images = get_sub_field('gallery'); @endphp
 		@foreach ( $images  as $image )
 
 			{{ wp_get_attachment_image($image, 'large') }}
 
 		@endforeach
+		
 	</div>
 
 	<div class="col-lg-6 content content--right">
 		{{ the_sub_field('content') }}
+
+		@php $buttons = get_field('buttons') @endphp
+		@foreach ( $buttons as $button )
+
+			<a class="btn btn__primary" href="{{ $button['url'] }}">
+				{{ $button['title'] }}
+			</a>
+
+		@endforeach
 	</div>
 </section>
